@@ -24,10 +24,10 @@
     <!-- font-awsome -->
     <link rel="stylesheet" href="Css/index.css" />
   </head>
-  <body>
+  <body class="font-primary-days1">
     <!--  Start nav-bar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid chakra-petch-regular">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid position-fixed font-secondary-chakra top-0 start-0 z-3">
+      <div class="container-lg">
         <div class="logo m-3 d-flex justify-content-evenly align-items-center">
           <span class="">+</span><span class="logo-dot ms-1">:</span>
         </div>
@@ -46,21 +46,21 @@
         </button>
 
         <div class="collapse navbar-collapse flex-column flex-lg-row" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-3">
             <li class="nav-item my-2 py-2 my-lg-0 py-lg-0 me-2 me-lg-0">
               <a class="nav-link active text-neoun" aria-cu rrent="page" href="#home">Home</a>
             </li>
-            <li class="nav-item my-2 py-2 my-lg-0 py-lg-0 me-2 mx-lg-2 fs-6">
+            <li class="nav-item my-2 py-2 my-lg-0 py-lg-0 fs-6">
               <a class="nav-link text-uppercase text-white" href="#our-games">our games</a>
             </li>
 
-            <li class="nav-item my-2 py-2 my-lg-0 py-lg-0 me-2 mx-lg-2 fs-6">
+            <li class="nav-item my-2 py-2 my-lg-0 py-lg-0 fs-6">
               <a class="nav-link text-capitalize text-white" aria-disabled="true" href="#what-we-do">what we do</a>
             </li>
-            <li class="nav-item my-2 py-2 my-lg-0 py-lg-0 me-2 mx-lg-2 fs-6">
+            <li class="nav-item my-2 py-2 my-lg-0 py-lg-0 fs-6">
               <a class="nav-link text-capitalize text-white" aria-disabled="true" href="#our-team">our team</a>
             </li>
-            <li class="nav-item my-2 py-2 my-lg-0 py-lg-0 me-2 mx-lg-2 fs-6">
+            <li class="nav-item my-2 py-2 my-lg-0 py-lg-0 fs-6">
               <a class="nav-link text-capitalize text-white" aria-disabled="true" href="#contact-us">contact us</a>
             </li>
           </ul>
@@ -73,12 +73,55 @@
               <span><i class="fa-regular fa-message p-3 me-3"></i></span>
               <span class="d-lg-none">Messages</span>
             </a>
-            <button class="btn btn-outline-success bg-neoun text-black fw-bolder w-100 w-lg-auto" type="submit">Sign in</button>
+            <button class="btn bg-neoun text-black fw-bolder w-100 w-lg-auto btn-with-hover px-3 h-75 align-self-center" type="submit">
+              Sign in
+            </button>
           </div>
         </div>
       </div>
     </nav>
     <!-- End nav-bar -->
+
+    <!-- Start hero-section  -->
+    <main>
+      <section class="hero-section d-flex">
+        <div class="container py-5 my-5">
+          <div class="row mt-100px">
+            <div class="col-lg-6">
+              <div class="inner text-white">
+                <h1 class="font-primary">THE ULTIMATE <span class="text-neoun">GAMING</span> EXPERIENCE</h1>
+                <p class="font-primary muted my-4">
+                  Join millions of gamers worldwide in the most competitive eSports <br />
+                  tournaments. Experience next-level gaming with cutting-edge technology and <br />
+                  endless possibilities.
+                </p>
+                <div class="d-flex gap-3 font-secondary-chakra">
+                  <button class="text-capitalize p-3 px-4 rounded-3 btn-with-hover bg-neoun fw-bold">start gaming now</button>
+                  <button class="text-capitalize p-3 px-4 rounded-3 btn-with-hover text-neoun bg-black fw-bold hover-neoun border-neoun">
+                    watch tournaments
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="inner position-relative">
+                <div class="img-wrapper bg-neoun rounded-5 position-relative mt-5 mt-lg-0">
+                  <img src="images/hero-img.png" alt="hero-image" class="border-neoun rounded-5 w-100" />
+                </div>
+                <div class="active-player p-3 d-flex rounded-2 text-white border-gray">
+                  <span class="d-block align-self-center px-3"><i class="fa-solid fa-trophy text-neoun"></i></span>
+                  <div class="caption-active-players">
+                    <p class="m-0 font-12px">active players</p>
+                    <p class="m-0 fs-5 fw-bold">2.5M+</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- End hero-section  -->
 
     <!-- bootstrap Js -->
     <script src="Js/bootstrap.js"></script>

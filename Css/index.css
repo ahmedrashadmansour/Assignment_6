@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-* {
+*,
+body {
   margin: 0;
   padding: 0;
 }
@@ -15,72 +16,7 @@ html,
 body {
   height: 100%;
   scroll-behavior: smooth;
-  scroll-padding-top: 63px;
-}
-
-.days-one-regular {
-  font-family: "Days One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.chakra-petch-light {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.chakra-petch-regular {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.chakra-petch-medium {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.chakra-petch-semibold {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.chakra-petch-bold {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.chakra-petch-light-italic {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.chakra-petch-regular-italic {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.chakra-petch-medium-italic {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.chakra-petch-semibold-italic {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.chakra-petch-bold-italic {
-  font-family: "Chakra Petch", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+  /* scroll-padding-top: 63px; */
 }
 
 img,
@@ -120,15 +56,31 @@ a {
   color: inherit;
 }
 
+img {
+  background-size: cover;
+}
+
 :root {
   --main-neoun-bg-color: #cbfe1c;
   --main-neoun-txt-color: #cbfe1c;
+  --font-primary: "Days One", sans-serif;
+  --font-secondary: "Chakra Petch", sans-serif;
+  --hover-color: rgba(213, 254, 28, 0.89);
+}
+
+.font-primary-days1 {
+  font-family: var(--font-primary);
+}
+.font-secondary-chakra {
+  font-family: var(--font-secondary);
 }
 
 .text-white {
   color: white !important;
 }
-
+.mt-100px {
+  margin-top: 75px !important;
+}
 .text-neoun {
   color: var(--main-neoun-txt-color) !important;
 }
@@ -136,6 +88,20 @@ a {
   background-color: var(--main-neoun-txt-color);
 }
 
+.border-neoun {
+  border: 2px solid var(--main-neoun-bg-color);
+}
+
+.border-gray {
+  border: 1px solid gray;
+}
+.w-35 {
+  width: 35%;
+}
+
+.font-12px {
+  font-size: 12px;
+}
 /* =================== End Global Variables ================*/
 
 /* ======== Start Navbar ========= */
@@ -159,23 +125,6 @@ a {
   transform: rotate(40deg) !important;
 }
 
-/* .navbar > .container,
-.navbar > .container-fluid,
-.navbar > .container-lg,
-.navbar > .container-md,
-.navbar > .container-sm,
-.navbar > .container-xl,
-.navbar > .container-xxl {
-  display: flex;
-  flex-wrap: inherit;
-  align-items: center;
-  justify-content: start;
-
-  .navbar-toggler {
-    justify-self: end;
-  }
-} */
-
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
@@ -187,4 +136,90 @@ a {
 nav li a:hover {
   color: var(--main-neoun-txt-color) !important;
 }
+
+.hover-neoun:hover {
+  background-color: var(--main-neoun-bg-color) !important;
+  color: black !important;
+}
+.btn-with-hover {
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(20px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-with-hover:hover {
+  background: var(--hover-color);
+}
+
+.btn-with-hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
+}
+
+.btn-with-hover:hover::before {
+  left: 150%;
+}
+
 /* ======== End Navbar ========= */
+
+/* ======== Start Hero-Section ========= */
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../images/hero-bg.jpg);
+  height: fit-content;
+  background-size: cover;
+  background-position: center;
+}
+/* 
+.inner {
+  height: 100vh;
+} */
+
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+p {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.img-wrapper {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+
+  border: 2px solid #ccff00;
+
+  box-shadow:
+    0 0 15px rgba(204, 255, 0, 0.4),
+    0 0 30px rgba(204, 255, 0, 0.2);
+
+  transition: all 0.3s ease-in-out;
+  max-height: 400px;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.active-player {
+  background-color: #0b0e13 !important;
+  position: absolute;
+  left: -5%;
+  bottom: -5%;
+  /* overflow: visible; */
+}
+
+/* ======== End Hero-Section ========= */
