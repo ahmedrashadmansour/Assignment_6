@@ -66,8 +66,12 @@ img {
   --font-primary: "Days One", sans-serif;
   --font-secondary: "Chakra Petch", sans-serif;
   --hover-color: rgba(213, 254, 28, 0.89);
+  --section-color: #0b0e13;
 }
 
+.section-bg-color {
+  background-color: var(--section-color) !important;
+}
 .font-primary-days1 {
   font-family: var(--font-primary);
 }
@@ -109,6 +113,19 @@ img {
 
 .font-12px {
   font-size: 12px;
+}
+
+h3 {
+  font-size: 48px !important;
+  font-weight: 700;
+}
+
+.card-dark-bg {
+  background-color: #1a1a1a;
+}
+
+.p-110 {
+  padding: 80px 100px;
 }
 /* =================== End Global Variables ================*/
 
@@ -160,7 +177,7 @@ nav li a:hover {
 .btn-with-hover {
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(20px); /* Frosted glass effect */
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -439,9 +456,119 @@ p {
   max-height: 330px;
 }
 
-/* img {
-  width: 100%;
-  background-size: cover;
-  background-attachment: fixed;
-} */
 /* ======== End  our-Games-Section ========= */
+
+/* ======== Start what we do section  ========= */
+
+.card {
+  position: relative;
+
+  background-color: #181818;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  aspect-ratio: 1/1;
+}
+
+.hovered-card::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 20px;
+  height: 20px;
+  background-color: #ccff00;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  transform: translate(-50px, -50px);
+  opacity: 0;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.4s ease;
+}
+.hovered-card:hover::before {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.hovered-card::after {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  background-color: #ccff00;
+
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  transform: translate(50px, 50px);
+  opacity: 0;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.4s ease;
+}
+
+.hovered-card:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.what-we-do .inner:hover .icon-container {
+  background-color: var(--main-neoun-bg-color) !important;
+
+  & i {
+    color: black;
+  }
+}
+
+.what-we-do .card:hover {
+  border: 2px solid var(--main-neoun-bg-color);
+}
+
+.bootom-line-neoun::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 2rem;
+  left: 25rem;
+  right: 0;
+  height: 2px;
+  width: 50%;
+  background: linear-gradient(90deg, rgba(204, 255, 0, 0) 0%, #ccff00 50%, rgba(204, 255, 0, 0) 100%);
+}
+
+/* ======== End what we do section  ========= */
+
+/* ========= start animated section  ============= */
+
+.auto-scroll-animation {
+  white-space: nowrap;
+  background: radial-gradient(circle, #ccff00 -50%, #181818 70%);
+  img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.auto-scroll-animation .inner {
+  width: max-content;
+  animation: inifite-scroll-images 60s linear infinite;
+}
+
+@keyframes inifite-scroll-images {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-120px * 12 - 16px * 12));
+  }
+}
+
+.auto-scroll-animation .inner.reverse {
+  animation-direction: reverse;
+}
+
+/* ========= end animated section  ============= */
