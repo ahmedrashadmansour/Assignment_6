@@ -669,3 +669,10 @@ p {
 }
 
 /* ========= end contact-us section  ============= */
+
+/* ========== Start contact us section ==========*/
+.firt-input {
+  width: 100%;
+  gap: 10px;
+}
+/* ========== end contact us section ==========*/
