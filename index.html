@@ -26,7 +26,7 @@
   </head>
   <body class="font-primary-days1">
     <!--  Start nav-bar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid position-fixed font-secondary-chakra top-0 start-0 z-3">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary position-fixed font-secondary-chakra top-0 start-0 z-3 end-0">
       <div class="container-lg">
         <div class="logo m-3 d-flex justify-content-evenly align-items-center">
           <span class="">+</span><span class="logo-dot ms-1">:</span>
@@ -691,7 +691,9 @@
             <div class="col-lg-6">
               <div class="inner">
                 <div class="location d-flex align-items-center components-bg rounded-4 p-3 mb-4">
-                  <div class="icon-component p-1 m-4 fs-2 bg-neoun flex-shrink-1 flex-grow-0"><i class="fa-solid fa-location-dot"></i></div>
+                  <div class="icon-component p-3 m-4 fs-4 rounded-circle bg-neoun flex-shrink-1 flex-grow-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
                   <div class="details text-start">
                     <h4 class="m-0 fw-bolder">Our Location</h4>
                     <p class="text-white-50">123 Gaming Street, Esports City, EC 12345</p>
@@ -699,7 +701,9 @@
                 </div>
 
                 <div class="email d-flex align-items-center components-bg rounded-4 p-3 mb-4">
-                  <div class="icon-component p-1 m-4 fs-2 bg-neoun flex-shrink-1 flex-grow-0"><i class="fa-solid fa-phone"></i></div>
+                  <div class="icon-component p-3 m-4 fs-4 rounded-circle bg-neoun flex-shrink-1 flex-grow-0">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
                   <div class="details text-start">
                     <h4 class="m-0 fw-bolder">Phone Number</h4>
                     <p class="text-white-50">+1 (555) 123-4567</p>
@@ -707,7 +711,9 @@
                 </div>
 
                 <div class="email d-flex align-items-center components-bg rounded-4 p-3 mb-4">
-                  <div class="icon-component p-1 m-4 fs-2 bg-neoun flex-shrink-1 flex-grow-0"><i class="fa-solid fa-envelope"></i></div>
+                  <div class="icon-component p-3 m-4 fs-4 rounded-circle bg-neoun flex-shrink-1 flex-grow-0">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
                   <div class="details text-start">
                     <h4 class="m-0 fw-bolder">Email Address</h4>
                     <p class="text-white-50">contact@gamearena.com</p>
@@ -728,27 +734,82 @@
             </div>
             <div class="col-lg-6">
               <div class="inner">
-                <form action="" class="components-bg rounded-4">
-                  <h4 class="p-3 py-5 text-start">Send us a Message</h4>
+                <form action="" class="components-bg rounded-4 p-3">
+                  <h4 class="p-3 py-2 text-start">Send us a Message</h4>
                   <div>
                     <div class="firt-input d-flex p-3 flex-wrap justify-content-between">
                       <div class="d-flex flex-column flex-grow-1">
-                        <label for="first-name" class="text-capitalize text-start py-1">first name</label>
+                        <label for="first-name" class="text-capitalize text-start py-1 font-14">first name</label>
                         <input
                           type="text"
                           id="first-name"
                           name="fname"
-                          class="rounded-3 p-3 flex-grow-1 flex-shrink-0"
+                          class="rounded-3 p-2 flex-grow-1 flex-shrink-0 inner-input-bg"
                           placeholder="Your First Name" />
                       </div>
                       <div class="d-flex flex-column flex-grow-1">
-                        <label for="first-name" class="text-capitalize text-start py-1">last name</label>
+                        <label for="first-name" class="text-capitalize text-start py-1 font-14">last name</label>
                         <input
                           type="text"
                           id="first-name"
                           name="lname"
-                          class="rounded-3 p-3 flex-grow-1 flex-shrink-0"
+                          class="rounded-3 p-2 flex-grow-1 flex-shrink-0 inner-input-bg"
                           placeholder="Your Last Name" />
+                      </div>
+                      <div class="email d-flex flex-column">
+                        <label for="email" class="text-capitalize text-start py-1 font-14">email address</label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          class="rounded-3 p-2 flex-grow-1 flex-shrink-0 inner-input-bg"
+                          placeholder="your.email@example.com" />
+                      </div>
+
+                      <div class="email d-flex flex-column py-2">
+                        <label for="subject" class="text-capitalize text-start py-1 font-14">subject</label>
+                        <select name="subject" id="subject" class="rounded-3 p-2 inner-input-bg text-white">
+                          <option value="general inquiry" class="text-capitalize">general inquiry</option>
+                          <option value="tournament support" class="text-capitalize">tournament support</option>
+                          <option value="technical issue" class="text-capitalize">technical issue</option>
+                          <option value="partenership" class="text-capitalize">partenership</option>
+                          <option value="media request " class="text-capitalize">media request</option>
+                        </select>
+                      </div>
+
+                      <div class="message d-flex flex-column py-2">
+                        <label for="message" class="text-capitalize text-start py-1 font-14">message</label>
+                        <textarea
+                          name="message"
+                          id="message"
+                          placeholder="Tell us how we can help you "
+                          class="rounded-3 p-2 text-start inner-input-bg"></textarea>
+                      </div>
+
+                      <div class="newsletter-sub">
+                        <input type="checkbox" name="newsletter-subscription" id="newsletter-subscription" class="newsletter-sub-check" />
+                        <label for="newsletter-subscription" class="font-12px text-gray py-3"
+                          >Subscribe to our newsletter for gaming updates</label
+                        >
+                      </div>
+
+                      <div class="msg-btn d-flex flex-column mb-3">
+                        <button
+                          class="submit btn text-capitalize text-dark text-capitalize p-3 px-4 rounded-3 btn-with-hover bg-neoun fw-bold"
+                          name="msg-btn">
+                          send message <span class="mx-2"><i class="fa-solid fa-paper-plane"></i></span>
+                        </button>
+                      </div>
+
+                      <div class="support-availablity d-flex justify-content-between w-100 p-3">
+                        <div class="left-info p-3">
+                          <h6 class="text-neoun fs-4 font-secondary-chakra fw-bolder">24/7</h6>
+                          <p class="font-14px text-gray">Support Available</p>
+                        </div>
+                        <div class="right-info p-3">
+                          <h6 class="text-neoun fs-4 font-secondary-chakra fw-bolder">1hr</h6>
+                          <p class="font-14px text-gray">Average Response</p>
+                        </div>
                       </div>
                     </div>
                   </div>

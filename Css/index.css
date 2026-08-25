@@ -16,7 +16,7 @@ html,
 body {
   height: 100%;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   /* scroll-padding-top: 63px; */
 }
 
@@ -671,8 +671,71 @@ p {
 /* ========= end contact-us section  ============= */
 
 /* ========== Start contact us section ==========*/
-.firt-input {
+.firt-input,
+.email {
   width: 100%;
   gap: 10px;
 }
+
+textarea {
+  resize: none;
+}
+.message {
+  width: 100%;
+}
+
+.msg-btn {
+  width: 100%;
+}
+
+.support-availablity {
+  border-top: 1px solid gray;
+}
+
+.inner-input-bg {
+  background-color: #364153;
+}
+
+input,
+textarea,
+select,
+.newsletter-sub-check {
+  border: 1px solid black !important;
+  outline: none !important;
+
+  &::placeholder {
+    font-size: 14px;
+  }
+}
+
+textarea {
+  height: 8rem;
+}
+
+select {
+  font-weight: 100 !important;
+  font-family: var(--font-secondary) !important;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.8);
+  margin-right: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+.newsletter-sub-check:focus {
+  border: 2px solid var(--main-neoun-txt-color) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.font-14 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #d1d5dc;
+  font-family: var(--font-secondary);
+}
+
 /* ========== end contact us section ==========*/
