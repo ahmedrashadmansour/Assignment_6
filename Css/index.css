@@ -10,14 +10,20 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+body {
   position: relative;
+}
+
+#navbar-example .nav-link.active {
+  color: #cbfe1c !important;
 }
 
 html,
 body {
   height: 100%;
   scroll-behavior: smooth;
-  /* overflow-x: hidden; */
   background-color: #101725;
   scroll-padding-top: 4rem;
 }
