@@ -24,9 +24,11 @@
     <!-- font-awsome -->
     <link rel="stylesheet" href="Css/index.css" />
   </head>
-  <body class="font-primary-days1">
+  <body class="font-primary-days1" data-bs-spy="scroll" data-bs-target="#navbar-example">
     <!--  Start nav-bar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary position-fixed font-secondary-chakra top-0 start-0 z-3 end-0">
+    <nav
+      id="navbar-example"
+      class="navbar nav nav-link navbar-expand-lg bg-body-tertiary position-fixed font-secondary-chakra top-0 start-0 z-3 end-0">
       <div class="container-lg">
         <div class="logo m-3 d-flex justify-content-evenly align-items-center">
           <span class="">+</span><span class="logo-dot ms-1">:</span>
@@ -48,17 +50,19 @@
         <div class="collapse navbar-collapse flex-column flex-lg-row" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-3">
             <li class="nav-item my-2 py-2 my-lg-0 py-lg-0 me-2 me-lg-0">
-              <a class="nav-link active text-neoun" aria-cu rrent="page" href="#home">Home</a>
+              <a class="nav-link active text-neoun" aria-current="page" href="#hero">Home</a>
             </li>
             <li class="nav-item my-2 py-2 my-lg-0 py-lg-0 fs-6">
               <a class="nav-link text-uppercase text-white" href="#our-games">our games</a>
             </li>
 
             <li class="nav-item my-2 py-2 my-lg-0 py-lg-0 fs-6">
-              <a class="nav-link text-capitalize text-white" aria-disabled="true" href="#what-we-do">what we do</a>
+              <!-- aria-disabled="true"  -->
+              <a class="nav-link text-capitalize text-white" href="#what-we-do">what we do</a>
             </li>
             <li class="nav-item my-2 py-2 my-lg-0 py-lg-0 fs-6">
-              <a class="nav-link text-capitalize text-white" aria-disabled="true" href="#our-team">our team</a>
+              <!-- aria-disabled="true"  -->
+              <a class="nav-link text-capitalize text-white" href="#our-team">our team</a>
             </li>
             <li class="nav-item my-2 py-2 my-lg-0 py-lg-0 fs-6">
               <a class="nav-link text-capitalize text-white" aria-disabled="true" href="#contact-us">contact us</a>
@@ -84,7 +88,7 @@
 
     <!-- Start hero-section  -->
     <main>
-      <section class="hero-section d-flex section-bg-color">
+      <section class="hero-section d-flex section-bg-color" id="hero">
         <div class="container py-5 my-5">
           <div class="row mt-100px">
             <div class="col-lg-6">
@@ -123,7 +127,7 @@
       <!-- End hero-section  -->
 
       <!-- Start our games section  -->
-      <section class="our-games section-bg-color pb-5">
+      <section class="our-games section-bg-color pb-5" id="our-games">
         <div class="section-header text-center pb-5">
           <div class="p-wrapper">
             <p class="text-uppercase text font-secondary-chakra text-neoun">our games</p>
@@ -307,7 +311,7 @@
 
       <!-- Start what we do section  -->
 
-      <section class="what-we-do py-5 section-bg-color">
+      <section class="what-we-do py-5 section-bg-color" id="what-we-do">
         <div class="section-header text-center pb-5 my-5">
           <div class="p-wrapper">
             <p class="text-uppercase text font-secondary-chakra text-neoun">what we do</p>
@@ -507,7 +511,7 @@
       <!-- end animated section  -->
 
       <!-- start our team section  -->
-      <section class="our-team bg-danger container-fluid section-bg-color py-5">
+      <section class="our-team bg-danger container-fluid section-bg-color py-5" id="our-team">
         <div class="section-header text-center py-5">
           <p class="text-uppercase text font-secondary-chakra text-neoun">our team</p>
           <h2 class="text-capitalize h1-styling font-primary-days1 text-center text-white">Our Best Team Members</h2>
@@ -680,7 +684,7 @@
       <!-- End our team section  -->
 
       <!-- start contact us section -->
-      <section class="our-team container contact-us-bg py-5">
+      <section class="contact-us container contact-us-bg py-5" id="contact-us">
         <div class="section-header text-center py-5">
           <p class="text-uppercase text font-secondary-chakra text-neoun fs-4">CONTACT US</p>
           <h2 class="text-capitalize h1-styling font-primary-days1 text-center text-white">Get In Touch</h2>
@@ -745,7 +749,7 @@
             </div>
             <div class="col-lg-6">
               <div class="inner">
-                <form action="" class="components-bg rounded-4 p-3">
+                <form action="#" class="components-bg rounded-4 p-3">
                   <h4 class="p-3 py-2 text-start">Send us a Message</h4>
                   <div>
                     <div class="firt-input d-flex p-3 flex-wrap justify-content-between">
@@ -759,10 +763,10 @@
                           placeholder="Your First Name" />
                       </div>
                       <div class="d-flex flex-column flex-grow-1">
-                        <label for="first-name" class="text-capitalize text-start py-1 font-14">last name</label>
+                        <label for="last-name" class="text-capitalize text-start py-1 font-14">last name</label>
                         <input
                           type="text"
-                          id="first-name"
+                          id="last-name"
                           name="lname"
                           class="rounded-3 p-2 flex-grow-1 flex-shrink-0 inner-input-bg"
                           placeholder="Your Last Name" />
@@ -860,7 +864,7 @@
           </div>
           <div class="col-12 col-md-6 col-xl-3 py-3 py-lg-0">
             <div class="inner text-white">
-              <div class="games">
+              <div class="games p-3">
                 <h5 class="text-capitalize">games</h5>
                 <ul class="list-unstyled">
                   <li class="font-secondary-chakra py-2 font-16px"><a class="" href="#">VALORANT</a></li>
@@ -874,7 +878,7 @@
           </div>
           <div class="col-12 col-md-6 col-xl-3 py-3 py-lg-0">
             <div class="inner text-white">
-              <div class="games">
+              <div class="tiurnaments p-3">
                 <h5 class="text-capitalize">Tournaments</h5>
                 <ul class="list-unstyled">
                   <li class="font-secondary-chakra py-2 font-16px"><a class="" href="#">Upcoming Events</a></li>
@@ -888,7 +892,7 @@
           </div>
           <div class="col-12 col-md-6 col-xl-3 py-3 py-lg-0">
             <div class="inner text-white">
-              <div class="games">
+              <div class="support p-3">
                 <h5 class="text-capitalize">Support</h5>
                 <ul class="list-unstyled">
                   <li class="font-secondary-chakra py-2 font-16px"><a class="" href="#">Help Center</a></li>
@@ -905,7 +909,7 @@
           <div class="col">
             <div class="inner">
               <div
-                class="copy-rights d-flex flex-column align-items-center flex-md-row justify-content-between font-secondary-chakra py-2 font-16px">
+                class="copy-rights d-flex flex-column align-items-center flex-md-row justify-content-between font-secondary-chakra py-2 py-md-4 font-16px">
                 <div class="author pt-4 pt-md-0"><p>© 2025 GameArena. All rights reserved.</p></div>
                 <div class="policy-links">
                   <ul class="d-flex gap-5">

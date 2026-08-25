@@ -4,6 +4,13 @@
 
 /* md */
 @media (max-width: 768px) {
+  h1 {
+    font-size: 28px !important;
+  }
+  h2,
+  h3 {
+    font-size: 26px !important;
+  }
 }
 
 @media (min-width: 992px) {

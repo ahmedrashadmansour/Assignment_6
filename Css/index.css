@@ -10,6 +10,7 @@
 body {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 html,
@@ -18,7 +19,7 @@ body {
   scroll-behavior: smooth;
   /* overflow-x: hidden; */
   background-color: #101725;
-  /* scroll-padding-top: 63px; */
+  scroll-padding-top: 4rem;
 }
 
 img,
